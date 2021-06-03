@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <title>Contact</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <a href="{{ url_for('aboutme') }}" class="nav-link">About me</a>
+        </li>
+        <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Gallery</a></li>
+        <li class="nav-item active"><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="container mt-5">
+      <h1>Contac</h1>
+   <p><a href="mailto:annamatyjewicz@gmail.com">Napisz do mnie</a><br>
+A numeru telefonu nie podam, bo nie chcę dostawać spamu :)
+</p>
+    </div>
+  </body>
+</html>
