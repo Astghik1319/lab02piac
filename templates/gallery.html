@@ -27,27 +27,58 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Nawigacja</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="{{ url_for('aboutme') }}" class="nav-link">About me</a>
+          <a class="nav-link active" aria-current="page" href="../templates/index.html">Home</a>
         </li>
-        <li class="nav-item active"><a href="{{ url_for('gallery') }}" class="nav-link">Gallery</a></li>
-        <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+		 <li class="nav-item">
+          <a class="nav-link" href="../static/about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../templates/gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../templates/contact.html">Contact</a>
+        </li>
       </ul>
-    </nav>
+    </div>
+  </div>
+</nav>
     <div class="container">
       <div class="img-container mt-5">
-        <img src="../static/cat.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/krysia.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/gniewko.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/prisma.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/05.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/06.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/07.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/08.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
-		<img src="../static/09.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" />
+	  <a href="../static/cat.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+        <img src="../static/cat.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/krysia.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/krysia.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/gniewko.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/gniewko.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/prisma.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/prisma.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/05.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/05.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/06.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/06.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/07.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/07.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/08.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/08.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/09.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/09.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
       </div>
     </div>
   </body>
