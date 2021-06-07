@@ -1,7 +1,10 @@
 from flask import Flask
 from flask import render_template
 from flask_mail import Mail, Message
-
+from flask import Flask, render_template, request
+from AzureDB import AzureDB
+import mysql.connector
+from mysql.connector import errorcode
 
 app = Flask(__name__)
 mail = Mail(app)
@@ -56,3 +59,36 @@ def index():
 
 if __name__ == '__main__':
    app.run(debug = True)
+   
+   @app.route('/')
+def hello():
+ with AzureDB() as a:
+ data = a.azureGetData()
+ return render_template("result.html", data = data)
+ 
+if __name__ == '__main__':
+ app.run(debug=True)
+
+
+config = {
+  'host':'<piac02anna>.mysql.database.azure.com',
+  'user':'<lab02>@<mydemoserver>',
+  'password':'<piac02Anna>',
+  'database':'<piac02>',
+  'client_flags': [mysql.connector.ClientFlag.SSL],
+  'ssl_ca': '/var/wwww/html/DigiCertGlobalRootG2.crt.pem'
+}
+
+# Construct connection string
+try:
+   conn = mysql.connector.connect(**config)
+   print("Connection established")
+except mysql.connector.Error as err:
+  if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+    print("Something is wrong with the user name or password")
+  elif err.errno == errorcode.ER_BAD_DB_ERROR:
+    print("Database does not exist")
+  else:
+    print(err)
+else:
+  cursor = conn.cursor()
