@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dzieki!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+     crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}">SUPER STRONKA</a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="{{ url_for('aboutme') }}" class="nav-link">About me</a>
+            </li>
+            <li class="nav-item"><a href="{{ url_for('gallery') }}" class="nav-link">Gallery</a></li>
+            <li class="nav-item "><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+            <li class="nav-item active"><a href="{{url_for('guestbook')}}" class="nav-link">Guestbook</a></li>
+        </ul>
+      </nav>
+    {% if metod == 'POST' %}
+        <h1>Twój wpis został dodany!</h1>
+    {% elif metod == 'DELETE' %}
+        <h1>Wpis został usnięty!</h1>
+    {% elif metod == 'UPDATE' %}
+        <h1>Wpis został edytowany!</h1>
+    {% endif %}
