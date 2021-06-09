@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <title>Gallery</title>
+    <style>
+      .img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 40px;
+      }
+      .img-container img {
+        overflow: hidden;
+        max-width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Nawigacja</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="templates/index.html">Home</a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('aboutme') }}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="container">
+      <div class="img-container mt-5">
+	  <a href="../static/cat.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+        <img src="../static/cat.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/krysia.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/krysia.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/gniewko.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/gniewko.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/prisma.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/prisma.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/05.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/05.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/06.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/06.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/07.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/07.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/08.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/08.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+		
+		 <a href="../static/09.jpg" class="data-toggle="lightbox"  data-gallery="gallery">
+		<img src="../static/09.jpg"  width="300" height="300" alt="unsplash" class="img-fluid" /></a>
+      </div>
+    </div>
+  </body>
+</html>
